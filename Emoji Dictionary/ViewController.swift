@@ -8,11 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var emojiTable: UITableView!
+    
+    var emojis = ["😀","😎","💩","🙈","🐳"]
+    
+    // How many rows, and what goes in them?  Connect them to get this started.
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        emojiTable.dataSource = self // Look to this view controller for the answer.
+        emojiTable.delegate = self
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emojis.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = emojis [indexPath.row] // CTRL CMD SPACE for Emoji Menu
+        return cell
+        
     }
 
     override func didReceiveMemoryWarning() {
