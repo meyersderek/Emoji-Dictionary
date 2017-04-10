@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iwC-Mr-FZq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iwC-Mr-FZq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -68,16 +68,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u1-P1-71c">
+                                <rect key="frame" x="122.5" y="434" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthYear: 2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXa-Je-gDu">
+                                <rect key="frame" x="129.5" y="475" width="116.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SxL-kc-Pal" firstAttribute="top" secondItem="46T-gc-SHt" secondAttribute="bottom" constant="40" id="3MP-YH-d18"/>
+                            <constraint firstItem="0u1-P1-71c" firstAttribute="centerX" secondItem="LwJ-wQ-siK" secondAttribute="centerX" id="8E2-a9-6nB"/>
+                            <constraint firstItem="jXa-Je-gDu" firstAttribute="centerX" secondItem="LwJ-wQ-siK" secondAttribute="centerX" id="H0l-iM-aXv"/>
                             <constraint firstItem="RFS-D7-ecI" firstAttribute="top" secondItem="SxL-kc-Pal" secondAttribute="bottom" constant="50" id="Sas-ww-Cwv"/>
                             <constraint firstItem="RFS-D7-ecI" firstAttribute="centerX" secondItem="LwJ-wQ-siK" secondAttribute="centerX" id="giq-IZ-Ihw"/>
+                            <constraint firstItem="0u1-P1-71c" firstAttribute="top" secondItem="RFS-D7-ecI" secondAttribute="bottom" constant="20" id="jOX-gh-Fts"/>
+                            <constraint firstItem="jXa-Je-gDu" firstAttribute="top" secondItem="0u1-P1-71c" secondAttribute="bottom" constant="20" id="ptF-QG-tYc"/>
                             <constraint firstItem="SxL-kc-Pal" firstAttribute="centerX" secondItem="LwJ-wQ-siK" secondAttribute="centerX" id="wxd-6c-zrJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="jXa-Je-gDu" id="SAS-YT-FI4"/>
+                        <outlet property="categoryLabel" destination="0u1-P1-71c" id="4il-HU-fgi"/>
                         <outlet property="definitionLabel" destination="RFS-D7-ecI" id="tWx-HE-e2J"/>
                         <outlet property="emojiLabel" destination="SxL-kc-Pal" id="g0k-5x-BO8"/>
                     </connections>
